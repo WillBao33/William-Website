@@ -5,19 +5,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      #banner {
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 16px;
+      }
+      .fa-icon {
+        margin-right: 20px; /* Adjust the spacing between icons */
+        text-decoration: none; /* Remove the underline from the link */
+      }
+
+      .fa-icon:last-child {
+        margin-right: 0; /* Remove margin from the last icon */
+      }
+
+      .fa-icon i {
+        color: inherit; /* Keep the original color of the icons */
+      }
+    </style>
   </head>
   <body>
     {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="static/Mechatronics.jpg" style="height:360px; object-fit: cover; float: right;">
     <div class="container">
     <h1 class="text-center mt-2">William Bao</h1>
     <h3 class="text-center fs-6 mb-4"> Research Associate</h3>
-    <h2 class="text-center mt-2 mb-4">About William</h2>
+    <p class="text-center">
+      <a class="fa-icon fa-icon-2x" href="https://github.com/WillBao33" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="fa-icon fa-icon-2x" href="https://www.linkedin.com/in/williambao-mechatronics/" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </p>
+    <h2 class="mt-2 mb-4">About Me</h2>
     <div class="row" style="margin-bottom:16px">
-      <div class="col-md-6">
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      <div class="col-md-8">
+    <p class="lead" style="font-size:16px; text-align: justify">
+      I am a passionate engineer with a Master of Applied Science in Mechanical Engineering from Ontario Tech University, where my research focused on deep learning and mobile robotics. My career spans both academia and industry, with hands-on experience in designing and building automated systems, including autonomous robots and customized machines. I have a strong foundation in machine learning, computer vision, and data analysis, further enhanced by earning the Google Data Analytics Professional Certificate.</p>
+
+    <p class="lead" style="font-size:16px; text-align: justify">
+      In the industrial sector, I have worked extensively in machine design and building, robot programming (Fanuc, Universal Robots), and PLC programming (Siemens). My projects have involved developing and deploying complex automated systems that meet rigorous industrial standards and client requirements. I am skilled in Python, SQL, R, and cloud computing, and I am eager to apply these skills in new challenges. </p>
+
+      <p class="lead" style="font-size:16px; text-align: justify;">
+        I am open to opportunities in engineering, machine learning, and data science/analysis, where I can leverage my diverse experience to drive innovation and solve complex problems. Whether it’s developing cutting-edge solutions or extracting meaningful insights from data, I am excited to contribute to dynamic and forward-thinking teams. </p>
       </div>
-      <div class="d-none d-md-block col-md-6">
-        <img src="static/IMG_0812.jpg" style="height:320px;">
+      <div class="d-none d-md-block col-md-4">
+        <img src="static/IMG_0812.jpg" style="height:360px; object-fit: cover; float: right;">
       </div>
       </div>
     <h2 class="text-center mt-2 mb-4">Projects</h2>
@@ -26,8 +62,8 @@
           {% include 'project.html' %}
         {% endfor %}
       </div>
-    <div class="text-center">
-    <button class="btn btn-primary">Contact William</button>
+    <div class="text-center mt-4">
+    <a class="btn btn-primary" href="mailto:zhibinwilliam@gmail.com?subject=Message%20to%20William">Contact William</a>
       </div>
     </div>
     {% include 'footer.html' %}
