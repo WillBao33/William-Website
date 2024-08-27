@@ -24,6 +24,33 @@
       .fa-icon i {
         color: inherit; /* Keep the original color of the icons */
       }
+      /* Mobile adjustments for project details */
+      @media (max-width: 768px) {
+        .project-description {
+          display: none; /* Hide the description on mobile devices */
+        }
+
+        .project-title {
+          font-size: 1rem; /* Reduce the font size of the title on mobile */
+        }
+
+        .project-content {
+          flex: 0 0 100%; /* Make project content full width on mobile */
+          max-width: 100%;
+          text-align: center; /* Center align text on mobile */
+          margin-bottom: 8px; /* Add spacing below project content */
+        }
+
+        .project-button {
+          flex: 0 0 100%; /* Make button container full width on mobile */
+          max-width: 100%;
+          justify-content: center; /* Center align the button on mobile */
+        }
+
+        .btn {
+          width: 100%; /* Make button full width on mobile */
+        }
+      }
     </style>
   </head>
   <body>

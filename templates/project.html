@@ -1,19 +1,18 @@
 <div class="border-bottom row" style="margin-bottom:16px;padding-bottom:8px;">
-  <div class="col-9" style="text-align: justify"">
-  <h4 
-    style= "color:rgb(120,120,120); margin-bottom:4px;">
-    {{project['title']}}
-  </h4>
-  <div>
-    <b>Keywords: </b>{{project['keywords']}}
+  <div class="col-9 project-content" style="text-align: justify;">
+    <h4 class="project-title" style="color:rgb(120,120,120); margin-bottom:4px;">
+      {{ project['title'] }}
+    </h4>
+    <div>
+      <b>Keywords: </b>{{ project['keywords'] }}
+    </div>
+    {% if 'description' in project %}
+    <div class="project-description">
+      <b>Description: </b>{{ project['description'] }}
+    </div>
+    {% endif %}
   </div>
-  {% if 'description' in project %}
-  <div>
-    <b>Description: </b>{{project['description']}}
-  </div>
-  {% endif %}
-  </div>
-  <div class = "col-3 d-flex align-items-center justify-content-end">
-    <a href="{{ project['link']}}" type="button" class="btn btn-outline-primary float-right">Project Page</a>
+  <div class="col-3 d-flex align-items-center justify-content-end project-button">
+    <a href="{{ project['link'] }}" type="button" class="btn btn-outline-primary">Project Page</a>
   </div>
 </div>
